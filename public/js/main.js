@@ -19031,68 +19031,16 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],159:[function(require,module,exports){
-// Dependencies
-var React = require('react');
-var ListItem = require('./ListItem.jsx');
-
-var fakeIndividuals = [{
-  id: 1,
-  name: "Victor Dupuy"
-}, {
-  id: 2,
-  name: "Etienne Phelip"
-}, {
-  id: 3,
-  name: "Cedric Urvoy"
-}];
-
-var List = React.createClass({
-  displayName: 'List',
-
-  render: function () {
-    var listItems = fakeIndividuals.map(item => {
-      return React.createElement(ListItem, { key: item.id, name: item.name });
-    });
-
-    return React.createElement(
-      'ul',
-      null,
-      listItems
-    );
-  }
-});
-
-module.exports = List;
-
-},{"./ListItem.jsx":160,"react":157}],160:[function(require,module,exports){
-var React = require('react');
-
-var ListItem = React.createClass({
-  displayName: 'ListItem',
-
-  render: function () {
-    return React.createElement(
-      'li',
-      null,
-      React.createElement(
-        'h2',
-        null,
-        this.props.name
-      )
-    );
-  }
-});
-
-module.exports = ListItem;
-
-},{"react":157}],161:[function(require,module,exports){
 // This is the main entry point for the application
-// Here we'll call for other components
 
+//Dependencies
 var React = require('react');
 var ReactDOM = require('react-dom');
-var List = require('./components/List.jsx');
 
-ReactDOM.render(React.createElement(List, null), document.getElementById('persons'));
+//Components
 
-},{"./components/List.jsx":159,"react":157,"react-dom":1}]},{},[161]);
+//Application Logic
+//Example :
+// ReactDOM.render(<ComponentName/>, document.getElementById('persons'));
+
+},{"react":157,"react-dom":1}]},{},[159]);
